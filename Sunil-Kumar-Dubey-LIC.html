@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sunil Kumar Dubey - LIC Insurance Advisor, Bilaspur Branch. Explore current LIC insurance plans and request a personalised quotation.">
+  <meta name="theme-color" content="#062b5c">
+  <title>Sunil Kumar Dubey | LIC Insurance Advisor | Bilaspur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#062b5c;--blue:#0b4b8a;--gold:#d7aa38;--gold2:#f4d67c;--ink:#132033;--muted:#667085;--paper:#f7f9fc;--white:#fff;--line:#e4e8ef;--green:#159b62}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:#041d3e;color:#dbe8f8;font-size:.82rem}
+.topbar-inner{display:flex;justify-content:space-between;padding:7px 0}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand-mark{width:45px;height:45px;border-radius:12px;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-weight:800;font-size:.78rem}
+.brand strong{display:block;font-size:1rem}
+.brand small{display:block;color:var(--muted);font-size:.72rem}
+nav{display:flex;align-items:center;gap:22px}
+nav a{font-size:.9rem;font-weight:600;color:#344054}
+nav a:hover{color:var(--blue)}
+.nav-cta{background:var(--gold);padding:11px 18px;border-radius:999px;color:#18202b!important}
+.menu-toggle{display:none;background:none;border:0;font-size:1.5rem}
+.hero{background:linear-gradient(120deg,#062b5c,#0a3e70);color:white;padding:92px 0 100px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}
+.eyebrow,.section-kicker{font-size:.75rem;font-weight:800;letter-spacing:.13em;color:var(--gold2)}
+.hero h1{font-family:"Playfair Display",serif;font-size:clamp(3rem,6vw,5.5rem);line-height:1.02;margin:18px 0}
+.hero h1 em{color:var(--gold2);font-style:normal}
+.hero-copy>p:not(.hero-note){max-width:650px;color:#d8e5f4;font-size:1.08rem}
+.hero-actions{display:flex;gap:13px;margin:30px 0 15px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 20px;font-weight:800;transition:.2s;min-height:48px}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--gold);color:#172231}
+.btn-outline{border:1px solid rgba(255,255,255,.35);color:white;background:transparent}
+.btn-dark{background:var(--navy);color:white}
+.btn-whatsapp{background:#159b62;color:white}
+.full{width:100%}
+.hero-note{font-size:.76rem;color:#a9bfd8}
+.hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:34px;box-shadow:0 24px 70px rgba(0,0,0,.2)}
+.card-label{font-size:.72rem;color:var(--gold2);font-weight:800;letter-spacing:.12em}
+.hero-card h2{font-family:"Playfair Display",serif;font-size:2rem;margin:10px 0 25px}
+.goal-list{display:grid;gap:14px}
+.goal-list div{display:grid;grid-template-columns:36px 1fr;column-gap:10px}
+.goal-list span{grid-row:span 2;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;font-size:.65rem;color:var(--gold2)}
+.goal-list strong{font-size:.92rem}.goal-list small{color:#b7cbe0}
+.stats-strip{background:white;border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stats-grid div{padding:22px;border-right:1px solid var(--line);text-align:center}
+.stats-grid div:last-child{border:0}
+.stats-grid strong{display:block;color:var(--navy);font-size:1.55rem}
+.stats-grid span{font-size:.78rem;color:var(--muted)}
+.section{padding:90px 0}
+.about-grid,.planning-grid,.contact-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.section-kicker{color:var(--blue)}
+.section h2{font-family:"Playfair Display",serif;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.1;margin:12px 0 18px}
+.lead{font-size:1.08rem;color:#475467}
+.about-grid p{margin-bottom:14px}
+.trust-points{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
+.trust-points span{background:white;border:1px solid var(--line);padding:11px 13px;border-radius:10px;font-size:.88rem}
+.advisor-card,.address-card,.planning-form{background:white;border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:0 16px 40px rgba(16,24,40,.06)}
+.avatar{width:74px;height:74px;border-radius:20px;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-weight:900;font-size:1.1rem;margin-bottom:20px}
+.advisor-card h3{font-size:1.5rem}.advisor-card>p{color:var(--muted);margin-bottom:22px}
+.advisor-meta{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:12px 0;font-size:.9rem}.advisor-meta span{color:var(--muted)}
+.plans-section{background:white}
+.section-head{display:flex;justify-content:space-between;gap:25px;align-items:flex-end;margin-bottom:30px}
+.section-head>div{max-width:780px}
+.section-head p{color:var(--muted)}
+.verified{white-space:nowrap;background:#ecfdf3;color:#067647;border:1px solid #abefc6;border-radius:999px;padding:9px 13px;font-size:.75rem;font-weight:800}
+.plan-toolbar{display:grid;gap:16px;margin-bottom:28px}
+.search-box{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--paper);padding:0 15px;border-radius:12px}
+.search-box span{font-size:1.5rem;color:var(--muted)}
+.search-box input{border:0;background:transparent;outline:0;width:100%;padding:14px}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap}
+.filter{border:1px solid var(--line);background:white;padding:9px 13px;border-radius:999px;color:#475467;font-weight:700;font-size:.82rem}
+.filter.active{background:var(--navy);color:white;border-color:var(--navy)}
+.filter b{opacity:.7}
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.plan-card{border:1px solid var(--line);border-radius:18px;padding:22px;background:white;display:flex;flex-direction:column;min-height:305px;transition:.2s}
+.plan-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(16,24,40,.09)}
+.plan-top{display:flex;justify-content:space-between;gap:10px}
+.category{font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);font-weight:900;background:#edf5ff;padding:6px 8px;border-radius:7px}
+.plan-number{font-size:.75rem;color:var(--muted)}
+.plan-card h3{font-family:"Playfair Display",serif;font-size:1.3rem;line-height:1.2;margin:15px 0 8px}
+.plan-card p{font-size:.84rem;color:var(--muted)}
+.plan-benefits{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}
+.plan-benefits span{font-size:.7rem;border:1px solid var(--line);border-radius:999px;padding:5px 8px;color:#475467}
+.premium-line{margin-top:auto;background:#faf7ed;border:1px solid #f0e2b9;border-radius:10px;padding:10px;font-size:.78rem}
+.premium-line strong{display:block;color:#7a5b06}
+.card-actions{display:flex;gap:8px;margin-top:12px}
+.small-btn{flex:1;border:1px solid var(--line);background:white;padding:9px;border-radius:9px;font-size:.76rem;font-weight:800}
+.small-btn.primary{background:var(--navy);color:white;border-color:var(--navy)}
+.empty-state{text-align:center;padding:50px;color:var(--muted)}
+.compare-section{background:#f0f4f9}
+.compare-wrap{overflow-x:auto;background:white;border:1px solid var(--line);border-radius:18px}
+table{border-collapse:collapse;width:100%;min-width:700px}
+th,td{padding:15px;border-bottom:1px solid var(--line);text-align:left;font-size:.84rem;vertical-align:top}
+th{background:#f8fafc;color:#344054}
+td:first-child{font-weight:800;color:var(--navy);width:180px}
+.compare-empty{text-align:center;color:var(--muted);padding:45px}
+.notice{margin-top:25px;background:#fff8e6;border:1px solid #f3df9c;border-radius:14px;padding:15px;font-size:.85rem;color:#634b00}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:18px}
+.planning-form label{font-size:.78rem;font-weight:800;color:#344054}
+.planning-form input,.planning-form select{display:block;width:100%;margin-top:6px;border:1px solid var(--line);border-radius:10px;padding:12px;background:white;outline:none}
+.planning-form input:focus,.planning-form select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #e8f2ff}
+.full-field{grid-column:1/-1}
+.contact-section{background:linear-gradient(135deg,#061f43,#0b3d70);color:white}
+.contact-section .lead{color:#c5d5e7}
+.contact-section .section-kicker{color:var(--gold2)}
+.contact-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
+.contact-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:15px;border-radius:12px;display:flex;gap:12px;align-items:center}
+.contact-card span{font-size:1.3rem;color:var(--gold2)}
+.contact-card small{display:block;color:#b8cce1}.contact-card strong{font-size:.9rem}
+.address-card{color:var(--ink)}.address-card h3{font-family:"Playfair Display",serif;font-size:1.7rem;margin:10px 0}.address-card p{color:var(--muted);margin:10px 0}
+footer{background:#03182f;color:#b8c8da;padding:30px 0 80px;font-size:.8rem}
+.footer-grid{display:flex;justify-content:space-between;gap:30px}
+.footer-grid strong{display:block;color:white;font-size:1rem}.footer-grid span{display:block}
+.disclaimer{border-top:1px solid rgba(255,255,255,.1);margin-top:25px;padding-top:20px;line-height:1.7}
+.floating-actions{position:fixed;right:18px;bottom:18px;z-index:45;display:flex;flex-direction:column;gap:8px}
+.float-btn{padding:10px 15px;border-radius:999px;color:white;font-size:.76rem;font-weight:900;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.float-btn.whatsapp{background:#159b62}.float-btn.call{background:var(--navy)}
+.modal-overlay{position:fixed;inset:0;background:rgba(2,17,35,.72);backdrop-filter:blur(7px);display:flex;align-items:center;justify-content:center;padding:20px;z-index:100}
+.modal-overlay[hidden]{display:none}
+.modal{background:white;width:min(760px,100%);max-height:88vh;overflow:auto;border-radius:22px;padding:32px;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.3)}
+.modal-close{position:absolute;right:18px;top:18px;width:40px;height:40px;border-radius:50%;border:0;background:#f3eee0;font-size:1.5rem}
+.modal h2{font-family:"Playfair Display",serif;font-size:2rem;padding-right:45px;line-height:1.15}.modal .modal-sub{color:var(--muted);margin:5px 0 22px}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.detail-box{border:1px solid var(--line);border-radius:12px;padding:13px}.detail-box small{display:block;color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.07em}.detail-box strong{font-size:.9rem}
+.modal h4{margin:20px 0 7px;color:var(--navy)}.modal ul{padding-left:20px;color:#475467}.modal li{margin:5px 0}
+.modal-disclaimer{background:#fff8e6;border:1px solid #f3df9c;padding:13px;border-radius:11px;margin-top:20px;font-size:.8rem;color:#634b00}
+.modal-actions{display:flex;gap:9px;margin-top:20px}
+@media(max-width:900px){.hero-grid,.about-grid,.planning-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.plans-grid{grid-template-columns:repeat(2,1fr)}nav{gap:12px}.nav-cta{padding:9px 12px}.section-head{align-items:flex-start;flex-direction:column}.stats-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.topbar-inner{font-size:.7rem}.menu-toggle{display:block}nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.1);flex-direction:column;align-items:stretch}nav.open{display:flex}.hero{padding:65px 0}.hero-card{padding:24px}.plans-grid{grid-template-columns:1fr}.contact-actions{grid-template-columns:1fr}.footer-grid{flex-direction:column}.form-grid{grid-template-columns:1fr}.full-field{grid-column:auto}.modal-grid{grid-template-columns:1fr}.modal{padding:24px}.hero h1{font-size:3.1rem}}
+@media(max-width:420px){.stats-grid strong{font-size:1.25rem}.stats-grid span{font-size:.68rem}.stats-grid div{padding:15px 7px}.brand strong{font-size:.9rem}.brand small{font-size:.65rem}.floating-actions{right:10px;bottom:10px}.float-btn{font-size:.7rem;padding:9px 12px}}
+
+</style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>LIC Insurance Advisor • Bilaspur Branch</span>
+      <span>DM Club Member</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Sunil Kumar Dubey home">
+        <span class="brand-mark">SKD</span>
+        <span>
+          <strong>Sunil Kumar Dubey</strong>
+          <small>LIC Insurance Advisor</small>
+        </span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#plans">LIC Plans</a>
+        <a href="#compare">Compare</a>
+        <a href="#planning">Planning</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cta" href="tel:+919589993117">Call Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">LIC • BILASPUR BRANCH • DM CLUB MEMBER</span>
+          <h1>Protect Today.<br><em>Plan Tomorrow.</em></h1>
+          <p>Personalised life-insurance guidance for families, savings goals, child planning, retirement and long-term financial protection.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#plans">Explore LIC Plans</a>
+            <a class="btn btn-outline" href="#contact">Talk to Advisor</a>
+          </div>
+          <p class="hero-note">Independent informational website for Sunil Kumar Dubey. Not the official LIC website.</p>
+        </div>
+        <div class="hero-card">
+          <div class="card-label">PLAN WITH PURPOSE</div>
+          <h2>What could your insurance plan help you plan for?</h2>
+          <div class="goal-list">
+            <div><span>01</span><strong>Family Protection</strong><small>Financial protection for loved ones</small></div>
+            <div><span>02</span><strong>Child & Future Planning</strong><small>Long-term goals and education needs</small></div>
+            <div><span>03</span><strong>Savings</strong><small>Structured long-term financial planning</small></div>
+            <div><span>04</span><strong>Retirement Planning</strong><small>Plan for future income needs</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <div><strong id="planCount">27</strong><span>Current insurance plans listed</span></div>
+        <div><strong>4</strong><span>Main plan categories</span></div>
+        <div><strong>2</strong><span>Direct contact numbers</span></div>
+        <div><strong>1</strong><span>Personalised advisor</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div>
+          <span class="section-kicker">ABOUT THE ADVISOR</span>
+          <h2>Insurance guidance that starts with your goal.</h2>
+          <p class="lead">Sunil Kumar Dubey is an LIC Insurance Advisor associated with the LIC Bilaspur Branch and a DM Club Member.</p>
+          <p>The purpose of this website is to make it easier for customers to understand available LIC insurance options and contact the advisor for plan-specific guidance and quotations.</p>
+          <div class="trust-points">
+            <span>✓ Personal consultation</span>
+            <span>✓ Plan comparison</span>
+            <span>✓ Policy-related assistance</span>
+            <span>✓ Goal-oriented discussion</span>
+          </div>
+        </div>
+        <div class="advisor-card">
+          <div class="avatar">SKD</div>
+          <h3>Sunil Kumar Dubey</h3>
+          <p>LIC Insurance Advisor</p>
+          <div class="advisor-meta"><b>Branch</b><span>Bilaspur</span></div>
+          <div class="advisor-meta"><b>Status</b><span>DM Club Member</span></div>
+          <a class="btn btn-dark full" href="tel:+919589993117">Call 9589993117</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section plans-section" id="plans">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">CURRENT LIC CATALOGUE</span>
+            <h2>Explore LIC insurance plans</h2>
+            <p>Current plan names, plan numbers and UINs are based on LIC's official insurance-plan listing. Premiums are customer-specific.</p>
+          </div>
+          <span class="verified">✓ Official catalogue checked Aug 2026</span>
+        </div>
+
+        <div class="plan-toolbar">
+          <label class="search-box"><span>⌕</span><input id="planSearch" type="search" placeholder="Search plan name, number or UIN..."></label>
+          <div class="filter-row" id="categoryFilters">
+            <button class="filter active" data-category="All">All <b>27</b></button>
+            <button class="filter" data-category="Endowment">Endowment <b>11</b></button>
+            <button class="filter" data-category="Whole Life">Whole Life <b>3</b></button>
+            <button class="filter" data-category="Money Back">Money Back <b>5</b></button>
+            <button class="filter" data-category="Term Assurance">Term <b>8</b></button>
+          </div>
+        </div>
+
+        <div class="plans-grid" id="plansGrid"></div>
+        <div class="empty-state" id="emptyState" hidden>No plans matched your search.</div>
+      </div>
+    </section>
+
+    <section class="section compare-section" id="compare">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-kicker">COMPARE</span>
+            <h2>Shortlist up to 3 plans</h2>
+            <p>Select plans above using “Add to compare”. This is a feature comparison, not a premium quote.</p>
+          </div>
+          <button class="btn btn-primary" id="clearCompare">Clear selection</button>
+        </div>
+        <div class="compare-wrap">
+          <table id="compareTable">
+            <thead><tr><th>Feature</th><th>Plan 1</th><th>Plan 2</th><th>Plan 3</th></tr></thead>
+            <tbody id="compareBody">
+              <tr><td colspan="4" class="compare-empty">Add up to 3 plans to compare.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section planning-section" id="planning">
+      <div class="container planning-grid">
+        <div>
+          <span class="section-kicker">INSURANCE PLANNING ASSISTANT</span>
+          <h2>Tell us what you're planning for.</h2>
+          <p class="lead">Share a few details and generate a WhatsApp enquiry for Sunil Kumar Dubey.</p>
+          <div class="notice">
+            <strong>Important:</strong> This tool does not calculate an official LIC premium. Final premium, benefits, eligibility and policy terms depend on the selected product and applicable LIC rules.
+          </div>
+        </div>
+        <form class="planning-form" id="planningForm">
+          <div class="form-grid">
+            <label>Age<input required type="number" min="18" max="100" id="age" placeholder="e.g. 32"></label>
+            <label>Gender<select id="gender"><option>Male</option><option>Female</option><option>Prefer not to say</option></select></label>
+            <label>Desired life cover<input type="text" id="cover" placeholder="e.g. ₹50 lakh"></label>
+            <label>Policy term<input type="number" id="term" min="1" max="100" placeholder="Years"></label>
+            <label>Premium frequency<select id="frequency"><option>Yearly</option><option>Half-yearly</option><option>Quarterly</option><option>Monthly</option></select></label>
+            <label>Main goal<select id="goal"><option>Family Protection</option><option>Child / Future Planning</option><option>Savings</option><option>Retirement Planning</option><option>Other</option></select></label>
+            <label class="full-field">Your name<input required type="text" id="customerName" placeholder="Your name"></label>
+            <label class="full-field">Mobile number<input required type="tel" id="customerPhone" placeholder="10-digit mobile number"></label>
+          </div>
+          <button class="btn btn-primary full" type="submit">Generate WhatsApp Enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <span class="section-kicker">CONTACT</span>
+          <h2>Speak directly with Sunil Kumar Dubey.</h2>
+          <p class="lead">For current premiums, eligibility, illustrations and policy-specific details, contact the advisor.</p>
+          <div class="contact-actions">
+            <a class="contact-card" href="tel:+919589993117"><span>☎</span><div><small>Phone 1</small><strong>9589993117</strong></div></a>
+            <a class="contact-card" href="tel:+919826533117"><span>☎</span><div><small>Phone 2</small><strong>9826533117</strong></div></a>
+            <a class="contact-card" href="mailto:skdubey12391@gmail.com"><span>✉</span><div><small>Email</small><strong>skdubey12391@gmail.com</strong></div></a>
+          </div>
+        </div>
+        <div class="address-card">
+          <span class="section-kicker">OFFICE / CONTACT ADDRESS</span>
+          <h3>Sunil Kumar Dubey</h3>
+          <p>LIC Insurance Advisor<br>LIC Bilaspur Branch<br>DM Club Member</p>
+          <p>Vill. Pendri SA,<br>Post Sargaon,<br>Dist. Mungeli,<br>Chhattisgarh, India</p>
+          <a class="btn btn-whatsapp full" target="_blank" rel="noopener" href="https://wa.me/919589993117?text=Hello%20Sunil%20Kumar%20Dubey%20Sir%2C%20I%20would%20like%20information%20about%20LIC%20insurance%20plans.">WhatsApp Advisor</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><strong>Sunil Kumar Dubey</strong><span>LIC Insurance Advisor • Bilaspur Branch • DM Club Member</span></div>
+      <div><span>9589993117 • 9826533117</span><span>skdubey12391@gmail.com</span></div>
+    </div>
+    <div class="container disclaimer">
+      <strong>Disclaimer:</strong> This is an independent informational website for Sunil Kumar Dubey, LIC Insurance Advisor, Bilaspur Branch. It is not the official website of Life Insurance Corporation of India. Plan features, premiums, benefits, bonuses, eligibility, maturity values and terms are subject to the applicable official LIC policy documents and rules. Premiums shown on this website are not fixed quotations.
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a class="float-btn whatsapp" target="_blank" rel="noopener" href="https://wa.me/919589993117?text=Hello%20Sunil%20Kumar%20Dubey%20Sir%2C%20I%20would%20like%20to%20know%20about%20LIC%20insurance%20plans.">WhatsApp</a>
+    <a class="float-btn call" href="tel:+919589993117">Call</a>
+  </div>
+
+  <div class="modal-overlay" id="modalOverlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+const plans = [
+  {name:"LIC's Single Premium Endowment Plan", no:"717", uin:"512N283V03", cat:"Endowment", purpose:"Savings + life protection", benefit:"Life cover with maturity benefit; single-premium structure.", tags:["Single premium","Savings","Protection"]},
+  {name:"LIC's New Endowment Plan", no:"714", uin:"512N277V03", cat:"Endowment", purpose:"Long-term savings + protection", benefit:"Endowment-style life cover with maturity benefit subject to policy terms.", tags:["Endowment","Savings","Protection"]},
+  {name:"LIC's New Jeevan Anand", no:"715", uin:"512N279V03", cat:"Endowment", purpose:"Savings + lifelong protection", benefit:"Combines protection during the policy term with benefits as specified in the policy document.", tags:["Popular","Endowment","Protection"]},
+  {name:"LIC's Jeevan Lakshya", no:"733", uin:"512N297V03", cat:"Endowment", purpose:"Family and long-term goal planning", benefit:"Designed for long-term protection and savings; exact benefits depend on policy terms.", tags:["Family","Savings","Goal planning"]},
+  {name:"LIC's Jeevan Labh Plan", no:"736", uin:"512N304V03", cat:"Endowment", purpose:"Limited-premium savings + protection", benefit:"Endowment plan with limited premium payment structure, subject to applicable terms.", tags:["Limited premium","Savings","Protection"]},
+  {name:"LIC's Amritbaal", no:"774", uin:"512N365V02", cat:"Endowment", purpose:"Child / future planning", benefit:"Long-term savings and protection features for future financial goals.", tags:["Child planning","Savings","Protection"]},
+  {name:"LIC's Nav Jeevan Shree", no:"912", uin:"512N387V02", cat:"Endowment", purpose:"Savings + protection", benefit:"Current LIC endowment offering with plan-specific benefits and terms.", tags:["Endowment","Savings","Protection"]},
+  {name:"LIC's Bima Lakshmi", no:"881", uin:"512N389V01", cat:"Endowment", purpose:"Life protection + savings", benefit:"Current LIC savings and protection offering; benefits depend on policy terms.", tags:["Savings","Protection"]},
+  {name:"LIC's New Jeevan Sathi - Single Premium", no:"888", uin:"512N393V01", cat:"Endowment", purpose:"Single-premium planning", benefit:"Current LIC endowment offering with a single-premium structure.", tags:["Single premium","Savings","Protection"]},
+  {name:"LIC's New Jeevan Sathi - Limited Premium", no:"889", uin:"512N394V01", cat:"Endowment", purpose:"Limited-premium planning", benefit:"Current LIC endowment offering with limited-premium structure.", tags:["Limited premium","Savings","Protection"]},
+  {name:"LIC's New Bima Jyoti", no:"890", uin:"512N395V01", cat:"Endowment", purpose:"Savings + protection", benefit:"Current LIC endowment offering; refer to the latest policy document for exact benefits.", tags:["New plan","Savings","Protection"]},
+  {name:"LIC's Jeevan Umang", no:"745", uin:"512N312V03", cat:"Whole Life", purpose:"Whole-life protection + income planning", benefit:"Whole-life insurance with benefits according to the applicable policy terms.", tags:["Whole life","Income","Protection"]},
+  {name:"LIC's Jeevan Utsav", no:"771", uin:"512N363V02", cat:"Whole Life", purpose:"Whole-life savings + income", benefit:"Whole-life plan with guaranteed-income options as specified in the official product information.", tags:["Whole life","Guaranteed benefit","Income"]},
+  {name:"LIC's Jeevan Utsav Single Premium", no:"883", uin:"512N392V01", cat:"Whole Life", purpose:"Single-premium whole-life planning", benefit:"Current whole-life single-premium product; exact benefits depend on selected option and policy terms.", tags:["Single premium","Whole life","Income"]},
+  {name:"LIC's Bima Shree", no:"748", uin:"512N316V03", cat:"Money Back", purpose:"Periodic money-back + protection", benefit:"Money-back style benefits during the policy term with life cover, subject to terms.", tags:["Money back","Savings","Protection"]},
+  {name:"LIC's New Money Back Plan - 20 Years", no:"720", uin:"512N280V03", cat:"Money Back", purpose:"Periodic payouts + protection", benefit:"Designed to provide scheduled survival benefits during the policy term, subject to terms.", tags:["20 years","Money back","Protection"]},
+  {name:"LIC's New Money Back Plan - 25 Years", no:"721", uin:"512N278V03", cat:"Money Back", purpose:"Periodic payouts + protection", benefit:"Designed to provide scheduled survival benefits during the policy term, subject to terms.", tags:["25 years","Money back","Protection"]},
+  {name:"LIC's New Children's Money Back Plan", no:"732", uin:"512N296V03", cat:"Money Back", purpose:"Child-focused financial planning", benefit:"Money-back style plan intended for children's future financial needs, subject to terms.", tags:["Children","Money back","Future planning"]},
+  {name:"LIC's Jeevan Tarun", no:"734", uin:"512N299V03", cat:"Money Back", purpose:"Child / education planning", benefit:"Child-focused plan with benefit options and maturity features as per policy terms.", tags:["Children","Education","Money back"]},
+  {name:"LIC's Digi Term", no:"876", uin:"512N356V02", cat:"Term Assurance", purpose:"Pure protection", benefit:"Term assurance designed to provide life cover during the policy term.", tags:["Term","Protection","Digital"]},
+  {name:"LIC's Digi Credit Life", no:"878", uin:"512N358V01", cat:"Term Assurance", purpose:"Credit-linked protection", benefit:"Term assurance designed around credit-related protection needs, subject to policy terms.", tags:["Term","Credit","Protection"]},
+  {name:"LIC's Yuva Credit Life", no:"877", uin:"512N357V01", cat:"Term Assurance", purpose:"Credit-linked protection", benefit:"Term assurance for eligible credit-related protection needs.", tags:["Term","Credit","Protection"]},
+  {name:"LIC's Yuva Term", no:"875", uin:"512N355V02", cat:"Term Assurance", purpose:"Term life protection", benefit:"Term assurance offering life cover during the selected policy term.", tags:["Term","Young adults","Protection"]},
+  {name:"LIC's New Tech-Term", no:"954", uin:"512N351V02", cat:"Term Assurance", purpose:"High-value family protection", benefit:"Term assurance providing life cover subject to eligibility and policy terms.", tags:["Term","Protection","Online"]},
+  {name:"LIC's New Jeevan Amar", no:"955", uin:"512N350V02", cat:"Term Assurance", purpose:"Family protection", benefit:"Term assurance intended to provide financial protection to dependants during the policy term.", tags:["Term","Family","Protection"]},
+  {name:"LIC's Saral Jeevan Bima", no:"859", uin:"512N341V01", cat:"Term Assurance", purpose:"Simple term protection", benefit:"Standardised term assurance product with benefits subject to policy terms.", tags:["Term","Simple","Protection"]},
+  {name:"LIC's Bima Kavach", no:"887", uin:"512N360V01", cat:"Term Assurance", purpose:"Pure risk family protection", benefit:"Non-linked, non-participating pure risk plan providing financial protection on death during the policy term.", tags:["Term","Pure risk","Protection"]}
+];
+
+const state = {category:"All", search:"", compare:[]};
+
+const $ = id => document.getElementById(id);
+const waNumber = "919589993117";
+
+function escapeHTML(value){
+  return String(value).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+}
+
+function filteredPlans(){
+  return plans.filter(p => {
+    const categoryOK = state.category === "All" || p.cat === state.category;
+    const hay = `${p.name} ${p.no} ${p.uin} ${p.cat} ${p.purpose}`.toLowerCase();
+    return categoryOK && hay.includes(state.search.toLowerCase());
+  });
+}
+
+function renderPlans(){
+  const grid = $("plansGrid");
+  const list = filteredPlans();
+  $("emptyState").hidden = list.length !== 0;
+  grid.innerHTML = list.map(p => `
+    <article class="plan-card">
+      <div class="plan-top"><span class="category">${escapeHTML(p.cat)}</span><span class="plan-number">Plan ${escapeHTML(p.no)}</span></div>
+      <h3>${escapeHTML(p.name)}</h3>
+      <p>${escapeHTML(p.benefit)}</p>
+      <div class="plan-benefits">${p.tags.map(t=>`<span>${escapeHTML(t)}</span>`).join("")}</div>
+      <div class="premium-line"><strong>Premium: Customer-specific</strong>Request a quotation based on age, cover, term and other applicable factors.</div>
+      <div class="card-actions">
+        <button class="small-btn primary" onclick="openPlan('${p.no}')">View details</button>
+        <button class="small-btn" onclick="addCompare('${p.no}')">${state.compare.includes(p.no) ? "✓ Added" : "Compare"}</button>
+      </div>
+    </article>`).join("");
+}
+
+function openPlan(no){
+  const p = plans.find(x => x.no === no);
+  if(!p) return;
+  const message = `Hello Sunil Kumar Dubey Sir, I would like a premium quotation for ${p.name} (Plan ${p.no}). Please guide me on eligibility, premium and suitable options.`;
+  $("modalContent").innerHTML = `
+    <span class="section-kicker">${escapeHTML(p.cat)}</span>
+    <h2 id="modalTitle">${escapeHTML(p.name)}</h2>
+    <p class="modal-sub">Plan No. ${escapeHTML(p.no)} • UIN ${escapeHTML(p.uin)}</p>
+    <div class="modal-grid">
+      <div class="detail-box"><small>Purpose</small><strong>${escapeHTML(p.purpose)}</strong></div>
+      <div class="detail-box"><small>Premium</small><strong>Customer-specific quotation</strong></div>
+      <div class="detail-box"><small>Life cover</small><strong>As per applicable policy terms</strong></div>
+      <div class="detail-box"><small>Maturity / payout</small><strong>As per applicable policy terms</strong></div>
+      <div class="detail-box"><small>Policy term</small><strong>Plan-specific</strong></div>
+      <div class="detail-box"><small>Premium payment</small><strong>Plan-specific</strong></div>
+    </div>
+    <h4>What this plan is about</h4>
+    <p>${escapeHTML(p.benefit)}</p>
+    <h4>Key points</h4>
+    <ul>
+      ${p.tags.map(t=>`<li>${escapeHTML(t)}</li>`).join("")}
+      <li>Final benefits depend on the selected option and applicable policy document.</li>
+      <li>Exact premium requires customer details and underwriting/product rules where applicable.</li>
+    </ul>
+    <div class="modal-disclaimer"><strong>Important:</strong> This website does not provide an official LIC premium quotation. Premiums, eligibility, benefits, bonuses, maturity values, riders and other terms must be confirmed using the current LIC product documentation and a personalised quotation.</div>
+    <div class="modal-actions">
+      <a class="btn btn-whatsapp" target="_blank" rel="noopener" href="https://wa.me/${waNumber}?text=${encodeURIComponent(message)}">Get Premium Quote</a>
+      <a class="btn btn-dark" href="tel:+919589993117">Call Advisor</a>
+    </div>`;
+  $("modalOverlay").hidden = false;
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(){
+  $("modalOverlay").hidden = true;
+  document.body.style.overflow = "";
+}
+
+function addCompare(no){
+  if(state.compare.includes(no)) state.compare = state.compare.filter(x=>x!==no);
+  else if(state.compare.length < 3) state.compare.push(no);
+  else { alert("You can compare up to 3 plans."); return; }
+  renderPlans(); renderCompare();
+}
+
+function renderCompare(){
+  const body = $("compareBody");
+  const selected = state.compare.map(no=>plans.find(p=>p.no===no)).filter(Boolean);
+  if(!selected.length){
+    body.innerHTML = `<tr><td colspan="4" class="compare-empty">Add up to 3 plans to compare.</td></tr>`;
+    return;
+  }
+  const rows = [
+    ["Plan", p=>p.name],["Category",p=>p.cat],["Plan No.",p=>p.no],["UIN",p=>p.uin],
+    ["Purpose",p=>p.purpose],["Premium",()=> "Customer-specific"],["Life cover",()=> "As per policy terms"],
+    ["Maturity / payout",()=> "As per policy terms"],["Key focus",p=>p.tags.join(", ")]
+  ];
+  body.innerHTML = rows.map(([label,fn]) => `<tr><td>${escapeHTML(label)}</td>${[0,1,2].map(i=>`<td>${selected[i]?escapeHTML(fn(selected[i])):"—"}</td>`).join("")}</tr>`).join("");
+}
+
+function setupWhatsAppForm(){
+  $("planningForm").addEventListener("submit", e=>{
+    e.preventDefault();
+    const phone = $("customerPhone").value.replace(/\D/g,"");
+    if(phone.length !== 10){ alert("Please enter a valid 10-digit mobile number."); return; }
+    const text = `Hello Sunil Kumar Dubey Sir,\n\nI would like personalised LIC insurance guidance.\n\nName: ${$("customerName").value}\nAge: ${$("age").value}\nGender: ${$("gender").value}\nDesired Life Cover: ${$("cover").value || "Not specified"}\nPolicy Term: ${$("term").value || "Not specified"} years\nPremium Frequency: ${$("frequency").value}\nMain Goal: ${$("goal").value}\nMy Mobile: ${phone}\n\nPlease suggest suitable LIC plans and current premium options.`;
+    window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+  });
+}
+
+$("planSearch").addEventListener("input", e=>{state.search=e.target.value;renderPlans();});
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
+  btn.classList.add("active"); state.category=btn.dataset.category; renderPlans();
+}));
+$("modalClose").addEventListener("click",closeModal);
+$("modalOverlay").addEventListener("click",e=>{if(e.target===$("modalOverlay")) closeModal();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape") closeModal();});
+$("clearCompare").addEventListener("click",()=>{state.compare=[];renderPlans();renderCompare();});
+$("menuToggle").addEventListener("click",()=>{
+  const nav=$("mainNav"); const open=nav.classList.toggle("open");
+  $("menuToggle").setAttribute("aria-expanded",open);
+});
+document.querySelectorAll("#mainNav a").forEach(a=>a.addEventListener("click",()=>{$("mainNav").classList.remove("open");}));
+setupWhatsAppForm();
+renderPlans();
+renderCompare();
+
+</script>
+</body>
+</html>
