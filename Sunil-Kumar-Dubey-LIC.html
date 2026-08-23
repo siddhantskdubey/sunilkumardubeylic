@@ -23,8 +23,46 @@ button{cursor:pointer}
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-wrap{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:11px}
-.brand-mark{width:45px;height:45px;border-radius:12px;background:var(--navy);color:var(--gold2);display:grid;place-items:center;font-weight:800;font-size:.78rem}
-.brand strong{display:block;font-size:1rem}
+.brand-mark{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--navy);
+  color:var(--navy);
+  display:grid;
+  place-items:center;
+  font-weight:900;
+  font-size:.72rem;
+  letter-spacing:-.03em;
+  box-shadow:0 3px 10px rgba(6,43,92,.12);
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+}
+
+.brand-text strong{
+  display:block;
+  font-size:1rem;
+  color:var(--navy);
+}
+
+.brand-text small{
+  display:block;
+  color:var(--muted);
+  font-size:.7rem;
+}
+
+.brand-tagline{
+  display:block;
+  color:#8a6a12;
+  font-size:.65rem;
+  font-style:italic;
+  font-weight:700;
+  margin-top:2px;
+}.brand strong{display:block;font-size:1rem}
 .brand small{display:block;color:var(--muted);font-size:.72rem}
 nav{display:flex;align-items:center;gap:22px}
 nav a{font-size:.9rem;font-weight:600;color:#344054}
