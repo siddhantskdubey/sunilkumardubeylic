@@ -184,7 +184,63 @@ footer{background:#03182f;color:#b8c8da;padding:30px 0 80px;font-size:.8rem}
 @media(max-width:900px){.hero-grid,.about-grid,.planning-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.plans-grid{grid-template-columns:repeat(2,1fr)}nav{gap:12px}.nav-cta{padding:9px 12px}.section-head{align-items:flex-start;flex-direction:column}.stats-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.topbar-inner{font-size:.7rem}.menu-toggle{display:block}nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.1);flex-direction:column;align-items:stretch}nav.open{display:flex}.hero{padding:65px 0}.hero-card{padding:24px}.plans-grid{grid-template-columns:1fr}.contact-actions{grid-template-columns:1fr}.footer-grid{flex-direction:column}.form-grid{grid-template-columns:1fr}.full-field{grid-column:auto}.modal-grid{grid-template-columns:1fr}.modal{padding:24px}.hero h1{font-size:3.1rem}}
 @media(max-width:420px){.stats-grid strong{font-size:1.25rem}.stats-grid span{font-size:.68rem}.stats-grid div{padding:15px 7px}.brand strong{font-size:.9rem}.brand small{font-size:.65rem}.floating-actions{right:10px;bottom:10px}.float-btn{font-size:.7rem;padding:9px 12px}}
+.premium-info{
+  background:#faf7ed;
+  border:1px solid #f0e2b9;
+  border-radius:14px;
+  padding:16px;
+  margin-top:10px;
+}
 
+.premium-frequency{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:12px;
+}
+
+.premium-frequency span{
+  background:white;
+  border:1px solid #e6d7a9;
+  color:#634b00;
+  border-radius:999px;
+  padding:7px 11px;
+  font-size:.76rem;
+  font-weight:800;
+}
+
+.premium-info p{
+  color:#667085;
+  font-size:.82rem;
+  margin-bottom:8px;
+}
+
+.premium-info strong{
+  color:#7a5b06;
+  font-size:.85rem;
+}
+
+.btn-outline-dark{
+  border:1px solid var(--navy);
+  color:var(--navy);
+  background:white;
+}
+
+.btn-outline-dark:hover{
+  background:#f3f7fc;
+}
+
+.modal-actions{
+  display:flex;
+  gap:9px;
+  margin-top:22px;
+  flex-wrap:wrap;
+}
+
+.modal-actions .btn{
+  flex:1;
+  min-width:150px;
+}
 </style>
 </head>
 <body>
@@ -465,6 +521,183 @@ function renderPlans(){
 }
 
 function openPlan(no){
+  const p = plans.find(x => x.no === no);
+  if(!p) return;
+
+  const message =
+`Hello Sunil Kumar Dubey Sir,
+
+I would like a premium quotation for ${p.name} (Plan ${p.no}).
+
+Please guide me regarding:
+• Eligibility
+• Premium
+• Policy term
+• Premium payment options
+• Benefits
+
+Thank you.`;
+
+  $("modalContent").innerHTML = `
+    <span class="section-kicker">${escapeHTML(p.cat)}</span>
+
+    <h2 id="modalTitle">${escapeHTML(p.name)}</h2>
+
+    <p class="modal-sub">
+      Plan No. ${escapeHTML(p.no)}
+      • UIN ${escapeHTML(p.uin)}
+    </p>
+
+    <div class="modal-grid">
+
+      <div class="detail-box">
+        <small>Plan category</small>
+        <strong>${escapeHTML(p.cat)}</strong>
+      </div>
+
+      <div class="detail-box">
+        <small>Purpose</small>
+        <strong>${escapeHTML(p.purpose)}</strong>
+      </div>
+
+      <div class="detail-box">
+        <small>Premium frequency</small>
+        <strong>${p.premiumModes ? p.premiumModes.join(", ") : "Plan-specific"}</strong>
+      </div>
+
+      <div class="detail-box">
+        <small>Premium</small>
+        <strong>Personalised quotation</strong>
+      </div>
+
+    </div>
+
+    <h4>📋 About this plan</h4>
+
+    <p>
+      ${escapeHTML(
+        p.description ||
+        p.benefit ||
+        "Please contact the advisor for detailed information."
+      )}
+    </p>
+
+    <h4>🎯 Suitable for</h4>
+
+    <ul>
+      ${
+        p.suitableFor
+          ? p.suitableFor
+              .map(item => `<li>${escapeHTML(item)}</li>`)
+              .join("")
+          : `<li>${escapeHTML(p.purpose)}</li>`
+      }
+    </ul>
+
+    <h4>⭐ Key features</h4>
+
+    <ul>
+      ${
+        p.features
+          ? p.features
+              .map(item => `<li>${escapeHTML(item)}</li>`)
+              .join("")
+          : `<li>${escapeHTML(p.benefit)}</li>`
+      }
+    </ul>
+
+    <h4>💰 Premium & payment options</h4>
+
+    <div class="premium-info">
+
+      <div class="premium-frequency">
+
+        ${
+          p.premiumModes
+            ? p.premiumModes
+                .map(mode => `
+                  <span>
+                    ${escapeHTML(mode)}
+                  </span>
+                `)
+                .join("")
+            : `
+              <span>Yearly</span>
+              <span>Half-yearly</span>
+              <span>Quarterly</span>
+              <span>Monthly</span>
+            `
+        }
+
+      </div>
+
+      <p>
+        ${
+          escapeHTML(
+            p.premiumNote ||
+            "Premium is customer-specific and must be confirmed through an applicable LIC quotation."
+          )
+        }
+      </p>
+
+      <strong>
+        Exact premium → Get a personalised quotation
+      </strong>
+
+    </div>
+
+    <div class="modal-disclaimer">
+
+      <strong>Important:</strong>
+
+      This website does not display an unofficial or estimated
+      premium as an official LIC quotation.
+
+      Actual premium, eligibility, benefits, bonuses, maturity values,
+      riders and other policy terms are subject to the applicable
+      LIC product documentation and rules.
+
+    </div>
+
+    <div class="modal-actions">
+
+      <a
+        class="btn btn-whatsapp"
+        target="_blank"
+        rel="noopener"
+        href="https://wa.me/${waNumber}?text=${encodeURIComponent(message)}"
+      >
+        💬 Get Premium Quote
+      </a>
+
+      ${
+        p.officialUrl
+          ? `
+            <a
+              class="btn btn-outline-dark"
+              target="_blank"
+              rel="noopener"
+              href="${escapeHTML(p.officialUrl)}"
+            >
+              🔵 Official LIC
+            </a>
+          `
+          : ""
+      }
+
+      <a
+        class="btn btn-dark"
+        href="tel:+919589993117"
+      >
+        📞 Call Advisor
+      </a>
+
+    </div>
+  `;
+
+  $("modalOverlay").hidden = false;
+  document.body.style.overflow = "hidden";
+}
   const p = plans.find(x => x.no === no);
   if(!p) return;
   const message = `Hello Sunil Kumar Dubey Sir, I would like a premium quotation for ${p.name} (Plan ${p.no}). Please guide me on eligibility, premium and suitable options.`;
