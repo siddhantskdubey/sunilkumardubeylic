@@ -698,10 +698,7 @@ Thank you.`;
   $("modalOverlay").hidden = false;
   document.body.style.overflow = "hidden";
 }
-  const p = plans.find(x => x.no === no);
-  if(!p) return;
-  const message = `Hello Sunil Kumar Dubey Sir, I would like a premium quotation for ${p.name} (Plan ${p.no}). Please guide me on eligibility, premium and suitable options.`;
-  $("modalContent").innerHTML = `
+  
     <span class="section-kicker">${escapeHTML(p.cat)}</span>
     <h2 id="modalTitle">${escapeHTML(p.name)}</h2>
     <p class="modal-sub">Plan No. ${escapeHTML(p.no)} • UIN ${escapeHTML(p.uin)}</p>
